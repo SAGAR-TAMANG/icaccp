@@ -55,30 +55,30 @@
 
   <!-- Hero Section -->
   <section id="hero">
-    <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
-      <h2 class="mb-4 pb-0">5th </h2>
+    <!-- <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
       <p class="mb-4 pb-0" style="font-size: 28px;">
-        <span>International Conference ON
-        Advanced Computational and Communication Paradigms (ICACCP)</span>
+        <span>
+          5th <br>International Conference On <br>Advanced Computational and Communication Paradigms (ICACCP)
+      </span>
       </p>
       <p class="mb-4 pb-0">June 6th-8th, 2025 || Department of Computer Science and Engineering, SMIT, Sikkim, India || Hybrid-Mode</p>
       <a href="#about" class="about-btn scrollto">About The Event</a>
-    </div>
+    </div> -->
   </section>
   <!-- Hero Section -->
 
   <main id="main">
     <!-- Hero Second Part -->
     
-    <!-- <div class="hero-container section-with-bg-2" data-aos="zoom-in" data-aos-delay="100">
-      <h2 class="mb-4 pb-0">Fifth International <br>Conference</h2>
-      <p class="mb-4 pb-0">ON</p>
-      <p class="mb-4 pb-0" style="font-size: 28px;"><span>Advanced Computational and Communication Paradigms (ICACCP)</span></p>
-      <p class="mb-4 pb-0">ICACCP 2025 ||  Hybrid-Mode || June 6th-8th, 2025 || Computer Science and Engineering, SMIT, Sikkim</p>
+    <div class="hero-2" style="text-align: center; padding-top:30px;">
+      <p class="mb-4 pb-0 font-1"><span>5th <br>International Conference On <br>Advanced Computational and Communication Paradigms (ICACCP)</span></p>
+      <p class="mb-4 pb-0">June 6th-8th, 2025 || Department of Computer Science and Engineering, SMIT, Sikkim, India || Hybrid-Mode</p>
       <a href="#about" class="about-btn scrollto"><button class="registrations">About The Event</button></a>
-    </div> -->
+    </div>
 
     <!-- Hero Second Part -->
+
+    <!-- <div class="empty-space"></div> -->
      
     <!-- About Section -->
     <section id="about">
@@ -148,21 +148,46 @@
     <!-- Testing auto deploy -->
     <div class="gallery-wrapper">
       <div class="gallery">
-        <img src="assets/img/1.JPG" alt="Conference 5">
-        <img src="assets/img/2.JPG" alt="Conference 6">
-        <img src="assets/img/3.JPG" alt="Conference 7">
-        <img src="assets/img/4.JPG" alt="Conference 8">
-        <img src="assets/img/smit-1.jpg" alt="Conference 1">
-        <img src="assets/img/smit-2.jpg" alt="Conference 2">
-        <img src="assets/img/smit-3.JPG" alt="Conference 3">
-        <img src="assets/img/background.webp" alt="Conference 4">
-        <img src="assets/img/boys hostel.jpg" alt="Conference 5">
-
-        <!-- <img src="assets/img/gallery/conference4.jpg" alt="Conference 4"> -->
-        <!-- Add more images as needed -->
+        <img src="assets/img/2017.webp" id="open-modal-btn" alt="Conference 5">
+        <img src="assets/img/2020.webp" id="open-modal-btn-2" alt="Conference 6">
+        <img src="assets/img/2023.webp" id="open-modal-btn-3" alt="Conference 7">
       </div>
     </div>
   </div>
+  <div id="popup-modal-1" class="hidden-1">
+    <div class="sub-gallery-modal">
+      <button class="close-btn">&times;</button>
+      <div class="sub-gallery">
+        <img src="assets/img/1.webp" alt="Image 1">
+        <img src="assets/img/2.webp" alt="Image 2">
+        <img src="assets/img/3.webp" alt="Image 3">
+        <img src="assets/img/4.webp" alt="Image 4">
+      </div>
+    </div>
+  </div>
+  <div id="popup-modal-2" class="hidden-2">
+    <div class="sub-gallery-modal">
+      <button class="close-btn-2">&times;</button>
+      <div class="sub-gallery">
+        <img src="assets/img/4.webp" alt="Image 4">
+        <img src="assets/img/2.webp" alt="Image 2">
+        <img src="assets/img/3.webp" alt="Image 3">
+        <img src="assets/img/1.webp" alt="Image 1">
+      </div>
+    </div>
+  </div>
+  <div id="popup-modal-3" class="hidden-3">
+    <div class="sub-gallery-modal">
+      <button class="close-btn-3">&times;</button>
+      <div class="sub-gallery">
+        <img src="assets/img/3.webp" alt="Image 3">
+        <img src="assets/img/2.webp" alt="Image 2">
+        <img src="assets/img/1.webp" alt="Image 1">
+        <img src="assets/img/4.webp" alt="Image 4">
+      </div>
+    </div>
+  </div>
+  
 </section>
 <!-- Gallery Section -->
 
@@ -451,6 +476,58 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    // Popup-1
+    // JavaScript to open and close the modal
+    document.getElementById('open-modal-btn').addEventListener('click', function() {
+      document.getElementById('popup-modal-1').style.display = 'flex';
+    });
+
+    document.querySelector('.close-btn').addEventListener('click', function() {
+      document.getElementById('popup-modal-1').style.display = 'none';
+    });
+
+    // Optional: Close the modal when clicking outside of it
+    window.addEventListener('click', function(event) {
+      if (event.target == document.getElementById('popup-modal-1')) {
+        document.getElementById('popup-modal-1').style.display = 'none';
+      }
+    });
+
+    // Popup-2
+    // JavaScript to open and close the modal
+    document.getElementById('open-modal-btn-2').addEventListener('click', function() {
+      document.getElementById('popup-modal-2').style.display = 'flex';
+    });
+
+    document.querySelector('.close-btn-2').addEventListener('click', function() {
+      document.getElementById('popup-modal-2').style.display = 'none';
+    });
+
+    // Optional: Close the modal when clicking outside of it
+    window.addEventListener('click', function(event) {
+      if (event.target == document.getElementById('popup-modal-2')) {
+        document.getElementById('popup-modal-2').style.display = 'none';
+      }
+    });
+
+    // Popup-3
+    // JavaScript to open and close the modal
+    document.getElementById('open-modal-btn-3').addEventListener('click', function() {
+      document.getElementById('popup-modal-3').style.display = 'flex';
+    });
+
+    document.querySelector('.close-btn-3').addEventListener('click', function() {
+      document.getElementById('popup-modal-3').style.display = 'none';
+    });
+
+    // Optional: Close the modal when clicking outside of it
+    window.addEventListener('click', function(event) {
+      if (event.target == document.getElementById('popup-modal-3')) {
+        document.getElementById('popup-modal-3').style.display = 'none';
+      }
+    });
+  </script>
 
 </body>
 </html>
