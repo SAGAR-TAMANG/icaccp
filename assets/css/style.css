@@ -1816,38 +1816,24 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 13px;
   color: #ddd;
 }
-
 .progress-table-wrap {
-  overflow-x: scroll;
+  overflow-x: auto; /* Allow scrolling only if necessary */
 }
 
 .progress-table {
   background: #f9f9ff;
-  padding: 15px 0px 30px 0px;
-  min-width: 1000px;
+  padding: 15px 0px 15px 0px;
+  width: 100%; /* Make table take up full width */
 }
 
-.progress-table .serial {
-  width: 40%;
-  padding-left: 30px;
-}
-
-.progress-table .category {
-  width: 33%;
-}
-
-.progress-table .row1 {
-  width: 33%;
-}
-
-.progress-table .row2 {
-  width: 33%;
-}
-
+.progress-table .serial,
+.progress-table .category,
+.progress-table .row1,
+.progress-table .row2,
 .progress-table .row3 {
-  width: 33%;
+  width: 20%; /* Reduce widths */
+  padding-left: 10px;
 }
-
 
 .progress-table .table-head {
   display: flex;
@@ -1857,16 +1843,15 @@ h1, h2, h3, h4, h5, h6 {
 .progress-table .table-head .category,
 .progress-table .table-head .row1,
 .progress-table .table-head .row2,
-.progress-table .table-head .row3,
-.progress-table .table-head  {
+.progress-table .table-head .row3 {
   color: #415094;
-  line-height: 40px;
-  text-transform: uppercase;
+  line-height: 30px; /* Reduce line height */
+  font-size: 14px; /* Smaller text for mobile */
   font-weight: 500;
 }
 
 .progress-table .table-row {
-  padding: 15px 0;
+  padding: 10px 0; /* Adjust padding */
   border-top: 1px solid #edf3fd;
   display: flex;
 }
@@ -1875,57 +1860,39 @@ h1, h2, h3, h4, h5, h6 {
 .progress-table .table-row .category,
 .progress-table .table-row .row1,
 .progress-table .table-row .row2,
-.progress-table .table-row .row3,
-.progress-table .table-row  {
+.progress-table .table-row .row3 {
   display: flex;
   align-items: center;
+  font-size: 14px; /* Smaller text */
 }
 
-.progress-table .table-row .category img {
-  margin-right: 15px;
+@media only screen and (max-width: 768px) {
+  .progress-table .serial,
+  .progress-table .category,
+  .progress-table .row1,
+  .progress-table .row2,
+  .progress-table .row3 {
+    width: 25%; /* Adjust column widths for smaller screens */
+  }
+
+  .progress-table .table-head .serial,
+  .progress-table .table-head .category,
+  .progress-table .table-head .row1,
+  .progress-table .table-head .row2,
+  .progress-table .table-head .row3 {
+    font-size: 8px; /* Further reduce text size on smaller screens */
+    line-height: normal;
+  }
+
+  .progress-table .table-row .serial,
+  .progress-table .table-row .category,
+  .progress-table .table-row .row1,
+  .progress-table .table-row .row2,
+  .progress-table .table-row .row3 {
+    font-size: 8px; /* Smaller text for rows */
+  }
 }
 
-.progress-table .table-row .percentage .progress {
-  width: 80%;
-  border-radius: 0px;
-  background: transparent;
-}
-
-.progress-table .table-row .percentage .progress .progress-bar {
-  height: 5px;
-  line-height: 5px;
-}
-
-.progress-table .table-row .percentage .progress .progress-bar.color-1 {
-  background-color: #6382e6;
-}
-
-.progress-table .table-row .percentage .progress .progress-bar.color-2 {
-  background-color: #e66686;
-}
-
-.progress-table .table-row .percentage .progress .progress-bar.color-3 {
-  background-color: #f09359;
-}
-
-.progress-table .table-row .percentage .progress .progress-bar.color-4 {
-  background-color: #73fbaf;
-}
-
-.progress-table .table-row .percentage .progress .progress-bar.color-5 {
-  background-color: #73fbaf;
-}
-
-.progress-table .table-row .percentage .progress .progress-bar.color-6 {
-  background-color: #6382e6;
-}
-
-.progress-table .table-row .percentage .progress .progress-bar.color-7 {
-  background-color: #a367e7;
-}
-
-.progress-table .table-row .percentage .progress .progress-bar.color-8 {
-  background-color: #e66686;
 }
 
 #advisory-committee ul {
